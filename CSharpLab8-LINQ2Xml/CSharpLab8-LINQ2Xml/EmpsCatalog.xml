@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<company>
+  <employee tabno="1234567890">
+    <deptno>10</deptno>
+    <firstname>Tanmay</firstname>
+    <lastname>Patil</lastname>
+    <gender>m</gender>
+    <salary>1500</salary>
+    <hiredate>12.12.2012</hiredate>
+    <commision_pct>0.12</commision_pct>
+    <income_tax>100</income_tax>
+    <days_worked>20</days_worked>
+    <workdays>20</workdays>
+    <gross_pay>1680</gross_pay>
+    <withheld>200</withheld>
+  </employee>
+    <employee tabno="1234567891">
+      <deptno>20</deptno>
+      <firstname>Maymay</firstname>
+      <lastname>Patil</lastname>
+      <gender>f</gender>
+      <salary>1500</salary>
+      <hiredate>13.13.2013</hiredate>
+      <commision_pct>0.12</commision_pct>
+      <income_tax>100</income_tax>
+      <days_worked>20</days_worked>
+      <workdays>20</workdays>
+      <gross_pay>1680</gross_pay>
+      <withheld>200</withheld>
+    </employee>
+      <employee tabno="1234567892">
+        <deptno>20</deptno>
+        <firstname>Tanum</firstname>
+        <lastname>Frostgate</lastname>
+        <gender>m</gender>
+        <salary>1500</salary>
+        <hiredate>01.01.2013</hiredate>
+        <commision_pct>0.12</commision_pct>
+        <income_tax>100</income_tax>
+        <days_worked>20</days_worked>
+        <workdays>20</workdays>
+        <gross_pay>1680</gross_pay>
+        <withheld>200</withheld>
+      </employee>
+
+</company>
+
+

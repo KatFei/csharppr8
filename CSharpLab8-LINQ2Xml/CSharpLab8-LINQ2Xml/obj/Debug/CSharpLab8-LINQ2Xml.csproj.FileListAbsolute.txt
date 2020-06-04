@@ -1,0 +1,10 @@
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\bin\Debug\CSharpLab8-LINQ2Xml.exe.config
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\bin\Debug\CSharpLab8-LINQ2Xml.exe
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\bin\Debug\CSharpLab8-LINQ2Xml.pdb
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\obj\Debug\CSharpLab8-LINQ2Xml.csprojAssemblyReference.cache
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\obj\Debug\CSharpLab8_LINQ2Xml.SearchEmployees.resources
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\obj\Debug\CSharpLab8_LINQ2Xml.Properties.Resources.resources
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\obj\Debug\CSharpLab8-LINQ2Xml.csproj.GenerateResource.cache
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\obj\Debug\CSharpLab8-LINQ2Xml.csproj.CoreCompileInputs.cache
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\obj\Debug\CSharpLab8-LINQ2Xml.exe
+C:\Users\Екатерина\Source\Repos\KatFei\csharppr8\CSharpLab8-LINQ2Xml\CSharpLab8-LINQ2Xml\obj\Debug\CSharpLab8-LINQ2Xml.pdb

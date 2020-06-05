@@ -32,18 +32,18 @@
             this.dataGridEmps = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.butAdd = new System.Windows.Forms.Button();
+            this.butDel = new System.Windows.Forms.Button();
             this.butSave = new System.Windows.Forms.Button();
             this.butSearch = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.butDel = new System.Windows.Forms.Button();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.tbGender = new System.Windows.Forms.TextBox();
+            this.lblHireDate = new System.Windows.Forms.Label();
+            this.tbHireDate = new System.Windows.Forms.TextBox();
+            this.lblDept = new System.Windows.Forms.Label();
+            this.tbDept = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmps)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -70,13 +70,18 @@
             // 
             // dataGridEmps
             // 
+            this.dataGridEmps.AllowUserToDeleteRows = false;
             this.dataGridEmps.AllowUserToOrderColumns = true;
+            this.dataGridEmps.AllowUserToResizeRows = false;
+            this.dataGridEmps.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridEmps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEmps.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridEmps.Location = new System.Drawing.Point(3, 43);
             this.dataGridEmps.Name = "dataGridEmps";
-            this.dataGridEmps.RowHeadersWidth = 51;
+            this.dataGridEmps.RowHeadersWidth = 21;
+            this.dataGridEmps.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridEmps.RowTemplate.Height = 24;
+            this.dataGridEmps.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridEmps.Size = new System.Drawing.Size(730, 361);
             this.dataGridEmps.TabIndex = 0;
             // 
@@ -99,6 +104,18 @@
             this.butAdd.TabIndex = 0;
             this.butAdd.Text = "Add";
             this.butAdd.UseVisualStyleBackColor = true;
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
+            // 
+            // butDel
+            // 
+            this.butDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butDel.Location = new System.Drawing.Point(3, 42);
+            this.butDel.Name = "butDel";
+            this.butDel.Size = new System.Drawing.Size(126, 33);
+            this.butDel.TabIndex = 2;
+            this.butDel.Text = "Delete";
+            this.butDel.UseVisualStyleBackColor = true;
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butSave
             // 
@@ -124,13 +141,13 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.lblName);
-            this.flowLayoutPanel2.Controls.Add(this.textBox1);
-            this.flowLayoutPanel2.Controls.Add(this.label2);
-            this.flowLayoutPanel2.Controls.Add(this.textBox2);
-            this.flowLayoutPanel2.Controls.Add(this.label3);
-            this.flowLayoutPanel2.Controls.Add(this.textBox3);
-            this.flowLayoutPanel2.Controls.Add(this.label4);
-            this.flowLayoutPanel2.Controls.Add(this.textBox4);
+            this.flowLayoutPanel2.Controls.Add(this.tbName);
+            this.flowLayoutPanel2.Controls.Add(this.lblGender);
+            this.flowLayoutPanel2.Controls.Add(this.tbGender);
+            this.flowLayoutPanel2.Controls.Add(this.lblHireDate);
+            this.flowLayoutPanel2.Controls.Add(this.tbHireDate);
+            this.flowLayoutPanel2.Controls.Add(this.lblDept);
+            this.flowLayoutPanel2.Controls.Add(this.tbDept);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -148,84 +165,74 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             // 
-            // textBox1
+            // tbName
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(61, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 24);
-            this.textBox1.TabIndex = 1;
+            this.tbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbName.Location = new System.Drawing.Point(61, 3);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(176, 24);
+            this.tbName.TabIndex = 1;
             // 
-            // label2
+            // lblGender
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(243, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Gender:";
+            this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGender.Location = new System.Drawing.Point(243, 6);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(61, 18);
+            this.lblGender.TabIndex = 2;
+            this.lblGender.Text = "Gender:";
             // 
-            // textBox2
+            // tbGender
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(310, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(44, 24);
-            this.textBox2.TabIndex = 3;
+            this.tbGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbGender.Location = new System.Drawing.Point(310, 3);
+            this.tbGender.Name = "tbGender";
+            this.tbGender.Size = new System.Drawing.Size(44, 24);
+            this.tbGender.TabIndex = 3;
             // 
-            // label3
+            // lblHireDate
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(360, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Hire date:";
+            this.lblHireDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblHireDate.AutoSize = true;
+            this.lblHireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblHireDate.Location = new System.Drawing.Point(360, 6);
+            this.lblHireDate.Name = "lblHireDate";
+            this.lblHireDate.Size = new System.Drawing.Size(71, 18);
+            this.lblHireDate.TabIndex = 4;
+            this.lblHireDate.Text = "Hire date:";
             // 
-            // textBox3
+            // tbHireDate
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(437, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(85, 24);
-            this.textBox3.TabIndex = 5;
+            this.tbHireDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbHireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbHireDate.Location = new System.Drawing.Point(437, 3);
+            this.tbHireDate.Name = "tbHireDate";
+            this.tbHireDate.Size = new System.Drawing.Size(85, 24);
+            this.tbHireDate.TabIndex = 5;
             // 
-            // label4
+            // lblDept
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(528, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Department:";
+            this.lblDept.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblDept.AutoSize = true;
+            this.lblDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDept.Location = new System.Drawing.Point(528, 6);
+            this.lblDept.Name = "lblDept";
+            this.lblDept.Size = new System.Drawing.Size(89, 18);
+            this.lblDept.TabIndex = 6;
+            this.lblDept.Text = "Department:";
             // 
-            // textBox4
+            // tbDept
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(623, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 24);
-            this.textBox4.TabIndex = 7;
-            // 
-            // butDel
-            // 
-            this.butDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.butDel.Location = new System.Drawing.Point(3, 42);
-            this.butDel.Name = "butDel";
-            this.butDel.Size = new System.Drawing.Size(126, 33);
-            this.butDel.TabIndex = 2;
-            this.butDel.Text = "Delete";
-            this.butDel.UseVisualStyleBackColor = true;
+            this.tbDept.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbDept.Location = new System.Drawing.Point(623, 3);
+            this.tbDept.Name = "tbDept";
+            this.tbDept.Size = new System.Drawing.Size(100, 24);
+            this.tbDept.TabIndex = 7;
             // 
             // SearchEmployees
             // 
@@ -255,13 +262,13 @@
         private System.Windows.Forms.Button butSearch;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.TextBox tbGender;
+        private System.Windows.Forms.Label lblHireDate;
+        private System.Windows.Forms.TextBox tbHireDate;
+        private System.Windows.Forms.Label lblDept;
+        private System.Windows.Forms.TextBox tbDept;
         private System.Windows.Forms.Button butDel;
     }
 }
